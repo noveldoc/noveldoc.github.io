@@ -17,20 +17,22 @@
   });
 
   const tabs = [...document.querySelectorAll("[data-shot]")];
-  const panels = {
-    workspace: document.querySelector("#shot-workspace"),
-    settings: document.querySelector("#shot-settings")
-  };
+  const panels = tabs.map((tab) => document.getElementById(tab.getAttribute("aria-controls")));
 
   function selectShot(name) {
-    tabs.forEach((tab) => tab.setAttribute("aria-selected", String(tab.dataset.shot === name)));
-    Object.entries(panels).forEach(([key, panel]) => { if (panel) panel.hidden = key !== name; });
+    tabs.forEach((tab, index) => {
+      const selected = tab.dataset.shot === name;
+      tab.setAttribute("aria-selected", String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+      if (panels[index]) panels[index].hidden = !selected;
+    });
   }
 
+  if (tabs.length) selectShot(tabs[0].dataset.shot);
   tabs.forEach((tab, index) => {
     tab.addEventListener("click", () => selectShot(tab.dataset.shot));
     tab.addEventListener("keydown", (event) => {
-      if (![/ArrowLeft/, /ArrowRight/].some((pattern) => pattern.test(event.key))) return;
+      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
       event.preventDefault();
       const next = event.key === "ArrowRight" ? (index + 1) % tabs.length : (index - 1 + tabs.length) % tabs.length;
       tabs[next].focus();

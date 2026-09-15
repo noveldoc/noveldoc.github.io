@@ -27,6 +27,6 @@ No build command is required.
 
 ## Assets
 
-- Product screenshots were captured from the real local `word_plugin_en/reader.html` preview.
+- The five product screenshots in `assets/screenshot-1-1280x800.png` through `assets/screenshot-5-1280x800.png` are the owner's own captures of the English extension.
 - The product icon is copied from the extension and is based on Font Awesome Free's file-word icon under CC BY 4.0; see `assets/ASSET_LICENSES.md`.
 - Figtree is licensed under the SIL Open Font License 1.1; see `assets/fonts/OFL.txt`.
