@@ -61,7 +61,6 @@ h1, h2, h3, p { overflow-wrap: break-word; }
 h1 { max-width: 760px; margin: 0; font-size: clamp(46px, 6vw, 76px); line-height: .98; letter-spacing: -.035em; font-weight: 760; }
 .hero-summary { max-width: 670px; margin: 24px 0 0; color: var(--muted); font-size: 22px; line-height: 1.45; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
-.store-status { max-width: 55ch; margin: 13px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
 .button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 0 18px; border: 1px solid transparent; border-radius: 8px; font-size: 15px; font-weight: 680; text-decoration: none; transition: background-color .18s ease, border-color .18s ease, color .18s ease; }
 .button.primary { color: #fff; background: var(--blue); }
 .button.primary:hover { background: var(--blue-dark); }
@@ -132,7 +131,6 @@ h1 { max-width: 760px; margin: 0; font-size: clamp(46px, 6vw, 76px); line-height
 .install-section li { padding: 0 0 17px 9px; color: var(--muted); line-height: 1.58; }
 .install-section li strong { color: var(--ink); }
 .install-section .text-link { grid-column: 2; justify-self: start; color: var(--blue-dark); font-weight: 680; }
-.install-section .install-status { grid-column: 2; margin-top: 0; }
 .store-link[aria-disabled="true"] { color: var(--muted); cursor: not-allowed; text-decoration-style: dotted; }
 
 .trust-section { padding-top: 94px; padding-bottom: 100px; border-top: 1px solid var(--rule); }
@@ -170,7 +168,6 @@ h1 { max-width: 760px; margin: 0; font-size: clamp(46px, 6vw, 76px); line-height
   .pricing-section { justify-content: stretch; }
   .price-panel { width: min(100%, 520px); }
   .install-section .text-link { grid-column: 1; }
-  .install-section .install-status { grid-column: 1; }
   .trust-grid { grid-template-columns: 1fr; gap: 24px; }
 }
 

@@ -9,11 +9,11 @@ Edit `site-config.js` before publishing:
 ```js
 window.NDR_SITE_CONFIG = {
   supportEmail: "noveldoc@outlook.com",
-  chromeWebStoreUrl: "https://chromewebstore.google.com/category/extensions"
+  chromeWebStoreUrl: "https://chromewebstore.google.com/detail/novel-document-reader/cjojminibpecajgeomafbkmacmbaingk"
 };
 ```
 
-The support address must be monitored and must match the contact information supplied to Stripe. The current Chrome Web Store URL is a temporary category-page placeholder and must be replaced with the extension's public detail-page URL before final Stripe or Chrome Web Store review.
+The support address must be monitored and must match the contact information supplied to Stripe. The Chrome Web Store URL points to the published Novel Document Reader listing.
 
 ## Publish with GitHub Pages
 
