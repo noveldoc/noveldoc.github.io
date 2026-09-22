@@ -90,7 +90,7 @@ h1 { max-width: 760px; margin: 0; font-size: clamp(46px, 6vw, 76px); line-height
 .screenshot-stage figcaption { padding: 12px 16px; color: #cbd9f3; background: #102750; font-size: 13px; line-height: 1.45; }
 .screenshot-stage figcaption a { margin-left: 6px; color: #fff; font-weight: 680; white-space: nowrap; }
 
-.feature-section, .steps-section, .pricing-section, .install-section, .trust-section, .support-strip { max-width: var(--max-width); margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+.feature-section, .steps-section, .pricing-section, .install-section, .trust-section, .qa-section, .support-strip { max-width: var(--max-width); margin: 0 auto; padding-left: 24px; padding-right: 24px; }
 .feature-section { display: grid; grid-template-columns: minmax(260px, .75fr) minmax(0, 1.25fr); gap: 90px; padding-top: 112px; padding-bottom: 112px; }
 .section-intro { align-self: start; position: sticky; top: 106px; }
 .section-intro h2, .pricing-copy h2, .install-section h2, .trust-section > h2, .support-strip h2 { margin: 0; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.05; letter-spacing: -.03em; }
@@ -120,6 +120,8 @@ h1 { max-width: 760px; margin: 0; font-size: clamp(46px, 6vw, 76px); line-height
 .price-line strong { font-size: 34px; line-height: 1; letter-spacing: -.03em; white-space: nowrap; }
 .price-line small { color: #bac6dc; font-size: 11px; letter-spacing: 0; }
 .price-panel > p { margin: 5px 0 22px; color: #bac6dc; font-size: 13px; }
+.price-panel .activation-notice { margin: 18px 0 24px; padding: 15px 17px; border-left: 3px solid #e6b858; color: #4c3a17; background: #fff4d6; font-size: 16px; font-weight: 620; line-height: 1.5; }
+.activation-notice strong { font-weight: 780; }
 .price-panel ul { display: grid; gap: 12px; margin: 0 0 25px; padding: 22px 0 0; border-top: 1px solid #46536a; list-style: none; }
 .price-panel li { position: relative; padding-left: 25px; line-height: 1.4; }
 .price-panel li::before { content: ""; position: absolute; left: 2px; top: 4px; width: 11px; height: 6px; border-left: 2px solid #7ee0b9; border-bottom: 2px solid #7ee0b9; transform: rotate(-45deg); }
@@ -137,6 +139,14 @@ h1 { max-width: 760px; margin: 0; font-size: clamp(46px, 6vw, 76px); line-height
 .trust-section > h2 { max-width: 700px; }
 .trust-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 44px; margin-top: 50px; }
 .trust-grid div { padding-top: 23px; border-top: 1px solid var(--blue); }
+.qa-section { display: grid; grid-template-columns: minmax(220px, .6fr) minmax(0, 1.4fr); gap: 80px; padding-top: 94px; padding-bottom: 94px; border-top: 1px solid var(--rule); scroll-margin-top: 84px; }
+.qa-section h2 { margin: 0; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.05; }
+.qa-list { margin: 0; }
+.qa-list div { padding: 22px 0; border-top: 1px solid var(--rule); }
+.qa-list div:first-child { padding-top: 0; border-top: 0; }
+.qa-list dt { font-size: 19px; font-weight: 700; line-height: 1.35; }
+.qa-list dd { margin: 10px 0 0; color: var(--muted); line-height: 1.65; }
+.qa-list a { color: var(--blue-dark); font-weight: 650; }
 .support-strip { display: flex; align-items: center; justify-content: space-between; gap: 48px; margin-bottom: 96px; padding-top: 45px; padding-bottom: 45px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
 .support-strip h2 { font-size: clamp(28px, 3.5vw, 42px); }
 
@@ -169,6 +179,7 @@ h1 { max-width: 760px; margin: 0; font-size: clamp(46px, 6vw, 76px); line-height
   .price-panel { width: min(100%, 520px); }
   .install-section .text-link { grid-column: 1; }
   .trust-grid { grid-template-columns: 1fr; gap: 24px; }
+  .qa-section { grid-template-columns: 1fr; gap: 30px; }
 }
 
 @media (max-width: 720px) {
@@ -195,7 +206,7 @@ h1 { max-width: 760px; margin: 0; font-size: clamp(46px, 6vw, 76px); line-height
   .media-tabs { width: 100%; }
   .button.store-cta { width: 100%; }
   .screenshot-stage img { min-height: 0; object-fit: contain; object-position: top left; }
-  .feature-section, .steps-section, .install-section, .trust-section { padding-top: 72px; padding-bottom: 72px; }
+  .feature-section, .steps-section, .install-section, .trust-section, .qa-section { padding-top: 72px; padding-bottom: 72px; }
   .section-intro.compact { grid-template-columns: 1fr; gap: 12px; }
   .steps { grid-template-columns: 1fr; }
   .steps li, .steps li + li, .steps li:nth-child(3) { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 14px; padding: 22px 0; border-right: 0; border-bottom: 1px solid var(--rule); }
